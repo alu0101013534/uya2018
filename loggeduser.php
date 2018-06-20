@@ -26,7 +26,7 @@ if(isset($_POST['logout'])){
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-        <title>QUIZZER</title>
+        <title>UYA</title>
 
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -38,7 +38,7 @@ if(isset($_POST['logout'])){
     </head>
     <body>
         <nav class="purple darken-1" role="navigation">
-            <div class="nav-wrapper container"><a id="logo-container" href="loggeduser.php" class="brand-logo">QUIZZER</a>
+            <div class="nav-wrapper container"><a id="logo-container" href="loggeduser.php" class="brand-logo">UYA</a>
                 <ul class="right hide-on-med-and-down">
                     <li style="margin-left: 5px; margin-right: 5px;"><b>User: <?php echo $_SESSION['user']; ?></b></li>
                     <li>
@@ -59,7 +59,7 @@ if(isset($_POST['logout'])){
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
         </nav>
-		<br></br>
+		<br>
 		<div class="center">
 			<div>
 				<i class="large material-icons grey-text text-lighten-2">account_circle</i> 
@@ -67,19 +67,19 @@ if(isset($_POST['logout'])){
 			<div>
 				<h6 class="header center purple-text text-lighten-2">User: <?php echo $_SESSION['user']; ?></h6>
 			</div>	
-			</br>
+			
 			<div>
 				<a href= "addquiz.php" class="btn btn-small waves-effect waves-light purple darken-1">Create new quiz</a>
 			</div> 
-			</br>
+			
 		</div>
 		<div>
 			<div class="row">
 				<div class="col s5 offset-s1">
-					 <h5 class="header center purple-text purple-darken-2">Created quizzes</h5>
+					 <h5 class="header center purple-text purple-darken-2">Your Wishlist</h5>
 				</div>
 				<div class="col s5">
-					 <h5 class="header center purple-text purple-darken-2">Solved quizzes</h5>
+					 <h5 class="header center purple-text purple-darken-2">Your Reviews</h5>
 				</div>
 			</div>
 			<div class="row">
@@ -87,26 +87,26 @@ if(isset($_POST['logout'])){
 					<table class="striped centered responsive-table">
 						<thead>
 						  <tr>
-							  <th>Quiz name</th>
+							  <th>Game name</th>
 						  </tr>
 						</thead>
 				
 						<tbody>
 						  <tr>
-							<td>Data bases</td>
-							<td> <a href= "updatequiz.php"> <i class="small material-icons purple-text text-darken-1">edit</i> </a></td>
+							<td>Clash Royale</td>
+							
 							<td> <a href= "#"> <i class="small material-icons purple-text text-darken-1">delete_forever</i> </a></td>
 							<td> <a href= "solveqiuz.php"> <i class="small material-icons purple-text text-darken-1">pageview</i> </a></td>
 						  </tr>
 						  <tr>
-							<td>Statistics </td>
-							<td> <a href= "updatequiz.php"> <i class="small material-icons purple-text text-darken-1">edit</i> </a></td>
+							<td>Fruit Ninja</td>
+							
 							<td> <a href= "#"> <i class="small material-icons purple-text text-darken-1">delete_forever</i> </a></td>
 							<td> <a href= "solveqiuz.php"> <i class="small material-icons purple-text text-darken-1">pageview</i> </a></td>
 						  </tr>
 						  <tr>
-							<td>Spanish 1</td>
-							<td> <a href= "updatequiz.php"> <i class="small material-icons purple-text text-darken-1">edit</i> </a></td>
+							<td>Candy Crush</td>
+							
 							<td> <a href= "#"> <i class="small material-icons purple-text text-darken-1">delete_forever</i> </a></td>
 							<td> <a href= "solveqiuz.php"> <i class="small material-icons purple-text text-darken-1">pageview</i> </a></td>
 						  </tr>
@@ -117,39 +117,36 @@ if(isset($_POST['logout'])){
 				<table class="striped centered responsive-table">
 					<thead>
 					  <tr>
-						  <th>Quiz name</th>
-						  <th>Score</th>
+						  <th>Game name</th>
+						  <th>Stars</th>
 					  </tr>
 					</thead>
 			
 					<tbody>
 					  <tr>
-						<td>Mathematics part 1</td>
-						<td>96%</td>
-						<td> <a href= "quizinfo.php"> <i class="small material-icons purple-text text-darken-1">pageview</i> </a></td>
+						<td>Clash of Clans</td>
+						<td><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></td>
+						<td> <a href= "#"> <i class="small material-icons purple-text text-darken-1">pageview</i> </a></td>
 					  </tr>
 					  <tr>
-						<td>Programming 1</td>
-						<td>49%</td>
-						<td> <a href= "quizinfo.php"> <i class="small material-icons purple-text text-darken-1">pageview</i> </a></td>
+						<td>Fallout Shelter</td>
+						<td><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></td>
+						<td> <a href= "#"> <i class="small material-icons purple-text text-darken-1">pageview</i> </a></td>
 					  </tr>
 					  <tr>
-						<td>Mathematics part 2</td>
-						<td>76%</td>
-						<td> <a href= "quizinfo.php"> <i class="small material-icons purple-text text-darken-1">pageview</i> </a></td>
+						<td>Minecraft</td>
+						<td><i class="material-icons">star</i></td>
+						<td> <a href= "#"> <i class="small material-icons purple-text text-darken-1">pageview</i> </a></td>
 					  </tr>
 					</tbody>
 					</table>
 				</div>
 			</div>
-			</br>
-			</br>
 			<div class ="center">
 				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 					<button class="btn btn-small waves-effect waves-light red darken-1" type="submit" name="borrar">Delete profile</button>
 				</form>
 			</div>
-			</br>
 			<div class="card-panel grey lighten-4 center">
 				<span class="purple-text text-darken-1 center">
 					Here you can take a look at all of created and solved quizzes. You can view the quiz by clicking on 
@@ -157,26 +154,39 @@ if(isset($_POST['logout'])){
 					and to delete it by<i class="small material-icons">delete_forever</i>
 				</span>
 			</div>
-			</br>
         </div>
-        <footer class="page-footer purple lighten-1">
+     <footer class="page-footer purple lighten-1">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
                         <h5 class="white-text">Company Bio</h5>
-                        <p class="grey-text text-lighten-4">We are a team of 3 college students working on this project for the IT systems development subject.</p>
+                        <p class="grey-text text-lighten-4">We are a team of 3 college students working on this project for the Usability and accessibility subject.</p>
                     </div>
                     <div class="col l3 s12">
-                        <h5 class="white-text"></h5>
+                        <h5 class="white-text">Links</h5>
                         <ul>
-                            <li></li>
+                            <li><a class="white-text" href="index.html">Home</a></li>
+                            <li><a class="white-text" href="about.html">About</a></li>
+                            <li><a class="white-text" href="games.html">Games</a></li>
+                            <li><a class="white-text" href="shop.html">Shop</a></li>
+                            <li><a class="white-text" href="contactus.html">Contact Us</a></li>
+                             <li><a class="white-text" href="login.php">Log in</a></li>
+                             
+                            <li><a class="white-text" href="sitemap.html">Sitemap</a></li>
+                        </ul>
+                    </div>
+                     <div class="col l3 s12">
+                        <h5 class="white-text">Language</h5>
+                        <ul>
+                            <li><a class="white-text" href="index.html">English</a></li>
+                            <li><a class="white-text" href="es/index.html">Spanish</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="purple darken-1">
                 <div class="container" >
-                    Made by <a class="purple-text text-lighten-3"> Johan, Airan & Primož</a>
+                    Made by <a class="purple-text text-lighten-3"> Team 6</a>
                 </div>
             </div>
         </footer>

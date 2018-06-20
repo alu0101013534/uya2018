@@ -25,7 +25,7 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-        <title>QUIZZER</title>
+        <title>UYA</title>
 
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -36,25 +36,28 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
     </head>
     <body>
         <nav class="purple darken-1" role="navigation">
-            <div class="nav-wrapper container"><a id="logo-container" href="index.php" class="brand-logo">QUIZZER</a>
+            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">UYA</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="quizzes.php">Quizzes</a></li>
-                    <li><a href="ContactUs.php">Contact Us</a></li>
-                    <li><a href="login.php">Log in</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                     <li><a href="login.php">Log in</a></li>
                 </ul>
 
                 <ul id="nav-mobile" class="sidenav">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="quizzes.php">Quizzes</a></li>
-                    <li><a href="ContactUs.php">Contact Us</a></li>
-                    <li><a href="login.php">Log in</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                     <li><a href="login.php">Log in</a></li>
                 </ul>
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
         </nav>
+
 
 
 
@@ -95,31 +98,42 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
             </div>
 
         </div>
-        <footer class="page-footer purple lighten-1">
+       <footer class="page-footer purple lighten-1">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
                         <h5 class="white-text">Company Bio</h5>
-                        <p class="grey-text text-lighten-4">We are a team of 3 college students working on this project for the IT systems development subject.</p>
+                        <p class="grey-text text-lighten-4">We are a team of 3 college students working on this project for the Usability and accessibility subject.</p>
                     </div>
                     <div class="col l3 s12">
                         <h5 class="white-text">Links</h5>
                         <ul>
-                            <li><a class="white-text" href="index.php">Home</a></li>
-                            <li><a class="white-text" href="about.php">About</a></li>
-                            <li><a class="white-text" href="quizzes.php">Quizzes</a></li>
-                            <li><a class="white-text" href="ContactUs.php">Contact Us</a></li>
-                            <li><a class="white-text" href="login.php">Log in</a></li>
+                            <li><a class="white-text" href="index.html">Home</a></li>
+                            <li><a class="white-text" href="about.html">About</a></li>
+                            <li><a class="white-text" href="games.html">Games</a></li>
+                            <li><a class="white-text" href="shop.html">Shop</a></li>
+                            <li><a class="white-text" href="contactus.html">Contact Us</a></li>
+                             <li><a class="white-text" href="login.php">Log in</a></li>
+                             
+                            <li><a class="white-text" href="sitemap.html">Sitemap</a></li>
+                        </ul>
+                    </div>
+                     <div class="col l3 s12">
+                        <h5 class="white-text">Language</h5>
+                        <ul>
+                            <li><a class="white-text" href="index.html">English</a></li>
+                            <li><a class="white-text" href="es/index.html">Spanish</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="purple darken-1">
                 <div class="container" >
-                    Made by <a class="purple-text text-lighten-3"> Team6</a>
+                    Made by <a class="purple-text text-lighten-3"> Team 6</a>
                 </div>
             </div>
         </footer>
+
 
 
         <!--  Scripts-->

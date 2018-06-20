@@ -80,7 +80,7 @@ function validate_user($usuario, $password){
 		disconect_bbdd($conexion);
 		session_start();
 		$_SESSION['user'] = $usuario;
-		$_SESSION['platform'] = 'quizzer';
+		$_SESSION['platform'] = 'uya';
 		return true;
 	}else{
 		disconect_bbdd($conexion);
@@ -93,7 +93,7 @@ function validate_user($usuario, $password){
 
 function secure_user(){
 	@session_start();
-	if($_SESSION['platform'] != 'quizzer'){ 
+	if($_SESSION['platform'] != 'uya'){ 
 	  //Si no hay sesión activa, lo direccionamos al index.php (inicio de sesión) 
 	  header("Location: login.php"); 
 	  exit(); 
