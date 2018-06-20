@@ -68,9 +68,6 @@ if(isset($_POST['logout'])){
 				<h6 class="header center purple-text text-lighten-2">User: <?php echo $_SESSION['user']; ?></h6>
 			</div>	
 			
-			<div>
-				<a href= "addquiz.php" class="btn btn-small waves-effect waves-light purple darken-1">Create new quiz</a>
-			</div> 
 			
 		</div>
 		<div>
@@ -147,13 +144,8 @@ if(isset($_POST['logout'])){
 					<button class="btn btn-small waves-effect waves-light red darken-1" type="submit" name="borrar">Delete profile</button>
 				</form>
 			</div>
-			<div class="card-panel grey lighten-4 center">
-				<span class="purple-text text-darken-1 center">
-					Here you can take a look at all of created and solved quizzes. You can view the quiz by clicking on 
-					<i class="small material-icons">pageview</i>, modifying by <i class="small material-icons">edit</i>
-					and to delete it by<i class="small material-icons">delete_forever</i>
-				</span>
-			</div>
+			<br>
+            <br>
         </div>
      <footer class="page-footer purple lighten-1">
             <div class="container">
