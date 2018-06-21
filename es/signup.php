@@ -1,4 +1,38 @@
+<?php
+include_once 'controller.php';
 
+$status = true;
+
+
+if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
+    $usuario = $_POST['username'];
+    $password = $_POST['password'];
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email = $_POST['email'];
+
+    $errores = validate_form_signup($usuario, $password, $firstname, $lastname, $email);
+
+    // Si el array $errores está vacío, se aceptan los datos y se asignan a variables
+    if(sizeof($errores) == 0) {
+        create_user($usuario, $password, $firstname, $lastname, $email);
+        $status = true;
+        header("Location: login.php");
+    }else{
+        $status = false;
+        echo "<div class='row' style='margin-bottom:0px; background: orange; padding:5px; text-align: center;'><div role='alertdialog' aria-labelledby='dialog1Title'aria-selected='true' aria-describedby='dialog1Desc'>
+  <div role='document' tabindex='-1'>
+    <h2 id='dialog1Title'>Error</h2>
+    <p id='dialog1Desc'>";
+        foreach ($errores as $error){
+            echo "<li> $error </li>";
+        }
+        echo "</p></div></div></div>";
+    }
+    
+    
+}
+?>
 
 
 
@@ -17,7 +51,7 @@
 
     </head>
     <body>
-         <nav class="purple darken-1" role="navigation">
+      <nav class="purple darken-1" role="navigation">
             <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">UYA</a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="index.html" role="menuitem" aria-label="Inicio">Inicio</a></li>
@@ -39,79 +73,67 @@
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
         </nav>
-        <div id="index-banner" class="parallax-container">
-            <div class="section no-pad-bot">
-                <div class="container">
-                    <br><br>
-                    <h1 class="header center purple-text purple-lighten-2">UYA</h1>
-                    <div class="row center">
-                        <h5 class="header col s12 light">La consola definitiva</h5>
-                    </div>
-                    <div class="row center">
-                        <a href="shop.html" id="download-button" class="btn-large waves-effect waves-light purple lighten-1">Reserva Ya</a>
-                    </div>
-                    <br><br>
-
-                </div>
-            </div>
-            <div class="parallax"><img src="img/background1.jpg" alt="Unsplashed background img 1"></div>
-        </div>
-
-
-
 
                     <main role="main">
+
+
+ <h2 class="header center purple-text purple-lighten-2">Sign up</h2>
+<br>
         <div class="container">
-            <div class="section">
 
-                <!--   Icon Section   -->
-                <div class="row">
+            <div class="row">
 
-
-                    <div class="col s6 m6 ">
-                        <div class="icon-block">
-
-                            <p class="light">Hemos creado el UYA porque nos gusta jugar y hacer juegos para tv y siempre hemos querido traer la mejor manera creativa, innovadora a la sala de estar. Ahora cualquier desarrollador pequeños o grandes, expertos o iniciados podrán fácilmente crear juegos para la gran pantalla en 1080p.</p>
+                <form class="col s12" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+                    <div class="row">
+                        <div class="row">
+                            <div class="input-field col s6 offset-s3">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input name="username" type="text" <?php if(!$status){ echo 'value="'.$usuario.'"'; } ?> class="validate" aria-required="true">
+                                <label for="username">Usuario</label>
+                            </div> 
+                        </div> 
+                        <div class="row">
+                            <div class="input-field col s6 offset-s3">
+                                <i class="material-icons prefix">lock</i>
+                                <input name="password" type="password" class="validate" aria-required="true">
+                                <label for="password">Contraseña</label>
+                            </div>   
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6 offset-s3">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input name="firstname" type="text" <?php if(!$status){ echo 'value="'.$firstname.'"'; } ?> class="validate" aria-required="true">
+                                <label for="firstname">Nombre</label>
+                            </div>   
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6 offset-s3">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input name="lastname" type="text" <?php if(!$status){ echo 'value="'.$lastname.'"'; } ?> class="validate" aria-required="true">
+                                <label for="lastname">Apellido</label>
+                            </div>   
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6 offset-s3">
+                                <i class="material-icons prefix">email</i>
+                                <input name="email" type="email" <?php if(!$status){ echo 'value="'.$email.'"'; } ?> class="validate" aria-required="true">
+                                <label for="email">Email</label>
+                            </div>   
+                        </div>
+                        <div class="row center">
+                            <div class="input-field col s6 offset-s3">
+                                <button class="btn  purple-effect purple" type="submit" name="submit">Enviar
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>   
                         </div>
                     </div>
- <div class="col s6 m6 ">
-                        <div class="icon-block">
-
-                            <p class="light">Actualmente contamos con 1253 juegos y contando,estan listo para jugar y muchos son gratis para probar. pero por qué limitar estos grandes juegos a un solo sistema? incluso si el sistema es nuestro! Libertad, ha sido uno de las caracteristicas mas aclamadas desde el primer dia, asi que estamos emocionados de anunciar UYA Everywhere, juega donde quieras cuando quieras. Estamos embarcando una nueva manera de llevar estos magnificos juegos a todos. Subscríbete a nuestro blog para obtener toda la información. </p>
-                        </div>
-                    </div>
-                    
-                    <div class="col s6 m6 ">
-                        <div class="icon-block">
-
-                            <p class="light">
-                                Con UYA cualquiera puede crear juegos porque cada maquian UYA es su propio kit de desarrollador, no necesitas comprar una licendia o un sdk costoso. Está creado en android y soporta muchos motores. Vamos y crea el proximo gran titulo desde tu habitacion como en los viejos tiempos!. Revisa La seccion de desarrollador para mas detalles.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col s6 m6 ">
-                        <div class="icon-block">
-
-                            <p class="light">
-                                No solo la belleza de 1080p es solo para juegos. UYA trae tus aplicaiones favoritas a la gran pantalla para que puedas ver series, streams, películas y musica directamente en tu sala de estar.</p>
-                        </div>
-                    </div>
-                     <div class="col s6 m6 ">
-                        <div class="icon-block">
-
-                            <p class="light">
-                                UYA es la primera consola de videojuegos abierta, te invitamos a que la abras y veas que hay por dentro.Sin importar que uses WiFi o ethernet, querrás descargar juegos, ver peliculas, y todo lo puedes hacer en 1080p HD. Revisa las versiones de $99 y $129 en nuestra tienda.</p>
-                        </div>
-                    </div>
-
-                </div>
-               
+                </form>
             </div>
-            <br><br>
+
         </div>
         </main>
-        
-        <footer class="page-footer purple lighten-1" role="contentinfo">
+      <footer class="page-footer purple lighten-1" role="contentinfo">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
@@ -146,6 +168,8 @@
                 </div>
             </div>
         </footer>
+
+
         <!--  Scripts-->
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="js/materialize.js"></script>

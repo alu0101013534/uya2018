@@ -45,7 +45,7 @@ if(isset($_POST['logout'])){
                     <li style="margin-left: 5px; margin-right: 5px;"><b>User: <?php echo $_SESSION['user']; ?></b></li>
                     <li>
                     	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-							<button class="btn btn-small waves-effect waves-light purple darken-1" type="submit" name="logout">Log out</button>
+							<button class="btn btn-small waves-effect waves-light purple darken-1" type="submit" name="logout">Salir</button>
 						</form>
                     </li>
                 </ul>
@@ -54,7 +54,7 @@ if(isset($_POST['logout'])){
                     <li style="margin-left: 5px; margin-right: 5px;"><b>User: <?php echo $_SESSION['user']; ?></b></li>
                     <li>
                     	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-							<button class="btn btn-small waves-effect waves-light purple darken-1" type="submit" name="logout">Log out</button>
+							<button class="btn btn-small waves-effect waves-light purple darken-1" type="submit" name="logout">Salir</button>
 						</form>
                     </li>
                 </ul>
@@ -70,7 +70,7 @@ if(isset($_POST['logout'])){
 				<i class="large material-icons grey-text text-lighten-2">account_circle</i> 
 			</div>
 			<div>
-				<h6 class="header center purple-text text-lighten-2">User: <?php echo $_SESSION['user']; ?></h6>
+				<h6 class="header center purple-text text-lighten-2">Usuario: <?php echo $_SESSION['user']; ?></h6>
 			</div>	
 			
 			
@@ -78,10 +78,10 @@ if(isset($_POST['logout'])){
 		<div>
 			<div class="row">
 				<div class="col s5 offset-s1">
-					 <h5 class="header center purple-text purple-darken-2">Your Wishlist</h5>
+					 <h5 class="header center purple-text purple-darken-2">Tu lista de deseo</h5>
 				</div>
 				<div class="col s5">
-					 <h5 class="header center purple-text purple-darken-2">Your Reviews</h5>
+					 <h5 class="header center purple-text purple-darken-2">Tus Valoraciones</h5>
 				</div>
 			</div>
 			<div class="row">
@@ -89,7 +89,7 @@ if(isset($_POST['logout'])){
 					<table class="striped centered responsive-table">
 						<thead>
 						  <tr>
-							  <th>Game name</th>
+							  <th>Nombre del juego</th>
 						  </tr>
 						</thead>
 				
@@ -119,8 +119,8 @@ if(isset($_POST['logout'])){
 				<table class="striped centered responsive-table">
 					<thead>
 					  <tr>
-						  <th>Game name</th>
-						  <th>Stars</th>
+						  <th>Nombre del juego</th>
+						  <th>Estrellas</th>
 					  </tr>
 					</thead>
 			
@@ -146,7 +146,7 @@ if(isset($_POST['logout'])){
 			</div>
 			<div class ="center">
 				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-					<button class="btn btn-small waves-effect waves-light red darken-1" type="submit" name="borrar">Delete profile</button>
+					<button class="btn btn-small waves-effect waves-light red darken-1" type="submit" name="borrar">Borrar cuenta</button>
 				</form>
 			</div>
 			<br>
@@ -157,34 +157,34 @@ if(isset($_POST['logout'])){
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
-                        <h5 class="white-text">Company Bio</h5>
-                        <p class="grey-text text-lighten-4">We are a team of 3 college students working on this project for the Usability and accessibility subject.</p>
+                        <h5 class="white-text">Biografía</h5>
+                        <p class="grey-text text-lighten-4">Somos un equipo de 3 estudiantes universitarios trabajando para el proyecto de usabilidad y accesibilidad.</p>
                     </div>
                     <div class="col l3 s12">
                         <h5 class="white-text" aria-label="Links">Links</h5>
                         <ul>
-                            <li><a class="white-text" href="index.html">Home</a></li>
-                            <li><a class="white-text" href="about.html">About</a></li>
-                            <li><a class="white-text" href="games.html">Games</a></li>
-                            <li><a class="white-text" href="shop.html">Shop</a></li>
-                            <li><a class="white-text" href="contactus.html">Contact Us</a></li>
+                            <li><a class="white-text" href="index.html">Inicio</a></li>
+                            <li><a class="white-text" href="about.html">Acerca</a></li>
+                            <li><a class="white-text" href="games.html">Juegos</a></li>
+                            <li><a class="white-text" href="shop.html">Tienda</a></li>
+                            <li><a class="white-text" href="contactus.html">Contacto</a></li>
                              <li><a class="white-text" href="login.php">Log in</a></li>
                              
-                            <li><a class="white-text" href="sitemap.html">Sitemap</a></li>
+                            <li><a class="white-text" href="sitemap.html">Mapa del Sitio</a></li>
                         </ul>
                     </div>
                      <div class="col l3 s12">
-                        <h5 class="white-text" aria-label="Language">Language</h5>
+                        <h5 class="white-text" aria-label="Language">Idioma</h5>
                         <ul>
-                            <li><a class="white-text" href="index.html">English</a></li>
-                            <li><a class="white-text" href="es/index.html">Spanish</a></li>
+                            <li><a class="white-text" href="index.html">Inglés</a></li>
+                            <li><a class="white-text" href="es/index.html">Español</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="purple darken-1">
                 <div class="container" >
-                    Made by <a class="purple-text text-lighten-3"> Team 6</a>
+                     Hecho por <a class="purple-text text-lighten-3"> Equipo 6</a>
                 </div>
             </div>
         </footer>

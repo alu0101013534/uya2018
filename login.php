@@ -11,11 +11,27 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
             header("Location: loggeduser.php");
         }else{
             //echo "Error: En usuario o contraseña";
-            echo "<div class='row' style='margin-bottom:0px; background: orange; padding:5px; text-align: center;'><b>Error: En usuario o contraseña.</b></div>";
+           
+    
+     echo "<div class='row' style='margin-bottom:0px; background: orange; padding:5px; text-align: center;'><div role='alertdialog' aria-labelledby='dialog1Title' aria-selected='true' aria-describedby='dialog1Desc'>
+  <div role='document' tabindex='-1'>
+    <h2 id='dialog1Title'>Error</h2>
+    <p id='dialog1Desc'>wrong username or password</p>
+    </div>
+ 
+  </div>
+</div> ";
         }        
     }else{
         //echo "Error: No puedes dejar campos vacios.<br>";
-        echo "<div class='row' style='margin-bottom:0px; background: orange; padding:5px; text-align: center;'><b>Error: No puedes dejar campos vacios.</b></div>";
+        echo "<div class='row' style='margin-bottom:0px; background: orange; padding:5px; text-align: center;'><div role='alertdialog' aria-labelledby='dialog1Title'aria-selected='true' aria-describedby='dialog1Desc'>
+  <div role='document' tabindex='-1'>
+    <h2 id='dialog1Title'>Error</h2>
+    <p id='dialog1Desc'>You cant leave empty fields</p>
+   
+  </div>
+  </div>
+</div>";
     }
 }
 ?>
@@ -35,18 +51,19 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
 
     </head>
     <body>
+      
         <nav class="purple darken-1" role="navigation">
             <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">UYA</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="games.html">Games</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                     <li><a href="login.php">Log in</a></li>
+                    <li><a href="index.html" role="menuitem" aria-label="Home">Home</a></li>
+                    <li><a href="about.html"  role="menuitem"aria-label="About">About</a></li>
+                    <li><a href="games.html"  role="menuitem"aria-label="Games">Games</a></li>
+                    <li><a href="shop.html"  role="menuitem"aria-label="Shop">Shop</a></li>
+                    <li><a href="contactus.html"  role="menuitem"aria-label="Contact Us">Contact Us</a></li>
+                     <li><a href="login.php"  role="menuitem"aria-label="Log in">Log in</a></li>
                 </ul>
 
-                <ul id="nav-mobile" class="sidenav">
+                <ul id="nav-mobile" class="sidenav" aria-hidden="true">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="games.html">Games</a></li>
@@ -61,7 +78,7 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
 
-
+                    <main role="main">
  <h2 class="header center purple-text purple-lighten-2">Log In</h2>
 <br>
         <div class="container">
@@ -98,7 +115,8 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
             </div>
 
         </div>
-       <footer class="page-footer purple lighten-1">
+        </main>
+        <footer class="page-footer purple lighten-1" role="contentinfo">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
@@ -106,7 +124,7 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
                         <p class="grey-text text-lighten-4">We are a team of 3 college students working on this project for the Usability and accessibility subject.</p>
                     </div>
                     <div class="col l3 s12">
-                        <h5 class="white-text">Links</h5>
+                        <h5 class="white-text" aria-label="Links">Links</h5>
                         <ul>
                             <li><a class="white-text" href="index.html">Home</a></li>
                             <li><a class="white-text" href="about.html">About</a></li>
@@ -119,7 +137,7 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
                         </ul>
                     </div>
                      <div class="col l3 s12">
-                        <h5 class="white-text">Language</h5>
+                        <h5 class="white-text" aria-label="Language">Language</h5>
                         <ul>
                             <li><a class="white-text" href="index.html">English</a></li>
                             <li><a class="white-text" href="es/index.html">Spanish</a></li>

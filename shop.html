@@ -19,18 +19,18 @@
 
     </head>
     <body>
-        <nav class="purple darken-1" role="navigation">
+         <nav class="purple darken-1" role="navigation">
             <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">UYA</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="games.html">Games</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                     <li><a href="login.php">Log in</a></li>
+                    <li><a href="index.html" role="menuitem" aria-label="Home">Home</a></li>
+                    <li><a href="about.html"  role="menuitem"aria-label="About">About</a></li>
+                    <li><a href="games.html"  role="menuitem"aria-label="Games">Games</a></li>
+                    <li><a href="shop.html"  role="menuitem"aria-label="Shop">Shop</a></li>
+                    <li><a href="contactus.html"  role="menuitem"aria-label="Contact Us">Contact Us</a></li>
+                     <li><a href="login.php"  role="menuitem"aria-label="Log in">Log in</a></li>
                 </ul>
 
-                <ul id="nav-mobile" class="sidenav">
+                <ul id="nav-mobile" class="sidenav" aria-hidden="true">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="games.html">Games</a></li>
@@ -42,6 +42,7 @@
             </div>
         </nav>
 
+                    <main role="main">
                <div id="index-banner" class="parallax-container">
             <div class="section no-pad-bot">
                 <div class="container">
@@ -60,10 +61,10 @@
             <div class="parallax"><img src="img/background1.jpg" alt="Unsplashed background img 1"></div>
         </div>
 
-            
+        </main> 
 
 
-<footer class="page-footer purple lighten-1">
+ <footer class="page-footer purple lighten-1" role="contentinfo">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
@@ -71,7 +72,7 @@
                         <p class="grey-text text-lighten-4">We are a team of 3 college students working on this project for the Usability and accessibility subject.</p>
                     </div>
                     <div class="col l3 s12">
-                        <h5 class="white-text">Links</h5>
+                        <h5 class="white-text" aria-label="Links">Links</h5>
                         <ul>
                             <li><a class="white-text" href="index.html">Home</a></li>
                             <li><a class="white-text" href="about.html">About</a></li>
@@ -84,7 +85,7 @@
                         </ul>
                     </div>
                      <div class="col l3 s12">
-                        <h5 class="white-text">Language</h5>
+                        <h5 class="white-text" aria-label="Language">Language</h5>
                         <ul>
                             <li><a class="white-text" href="index.html">English</a></li>
                             <li><a class="white-text" href="es/index.html">Spanish</a></li>
