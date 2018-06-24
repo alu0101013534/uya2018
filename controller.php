@@ -50,7 +50,7 @@ function validate_email($subject, $body, $head){
 /* Tratamiento BBDD */
 
 function conect_bbdd(){
-	$conexion = mysqli_connect("localhost", "root", "", "uya") or
+	$conexion = mysqli_connect("localhost", "id4973834_root", "12345", "id4973834_uya") or
     	die("Problemas con la conexión");
 
     return $conexion;
