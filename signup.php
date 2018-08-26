@@ -17,7 +17,6 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
     if(sizeof($errores) == 0) {
         create_user($usuario, $password, $firstname, $lastname, $email);
         $status = true;
-        echo "<script type='text/javascript'>alert('Sent successfully');</script>";
         header("Location: login.php");
     }else{
         $status = false;
@@ -39,21 +38,23 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
 
 <!DOCTYPE html>
 <html lang="en">
-     <head>     <!-- Page-hiding snippet (recommended)  -->     <style>.async-hide { opacity: 0 !important} </style>     <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;     h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};     (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;     })(window,document.documentElement,'async-hide','dataLayer',4000,     {'GTM-NTCL4GD':true});</script>     <!-- Modified Analytics tracking code with Optimize plugin -->         <script>         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');          ga('create', 'UA-121249718-1', 'auto');         ga('require', 'GTM-NTCL4GD');         ga('send', 'pageview');         </script>                
+    <head><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121249718-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-121249718-1'); </script>
+ 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
         <title>UYA</title>
 
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="css/materialize.css" type="text/css" rel="stylesheet"  />
-        <link href="css/style.css" type="text/css" rel="stylesheet"  />
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
 
 
     </head>
     <body>
-       <nav class="purple darken-1" role="navigation"  >
-            <div class="nav-wrapper container" role="menubar"><a id="logo-container" href="#" class="brand-logo">UYA</a>
+       <nav class="purple darken-1" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">UYA</a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="index.html" role="menuitem" aria-label="Home">Home</a></li>
                     <li><a href="about.html"  role="menuitem"aria-label="About">About</a></li>
@@ -74,6 +75,7 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
         </nav>
+
 
 
                     <main role="main">
@@ -124,7 +126,7 @@ if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
                         </div>
                         <div class="row center">
                             <div class="input-field col s6 offset-s3">
-                                <button class="btn  purple-effect purple" type="submit" name="submit">Submit
+                                <button class="btn  green-effect green" type="submit" name="submit">Submit
                                     <i class="material-icons right">send</i>
                                 </button>
                             </div>   
